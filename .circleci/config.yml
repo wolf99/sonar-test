@@ -25,4 +25,4 @@ jobs:
       - run:
           name: Build MAKE
           command: 'make'
-      - sonarcloud/scan
+          
