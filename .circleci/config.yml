@@ -10,9 +10,6 @@ jobs:
       - run:
           name: Install dependencies and build project
           command: 'echo "Installing dependencies and building project"'
-#      - run:    
-#          name: Install SUDO
-#          command: 'apt-get install -y sudo && rm -rf /var/lib/apt/lists/*'
       - run:
           name: Update APT
           command: 'sudo apt-get update'
