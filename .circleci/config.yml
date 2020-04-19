@@ -10,18 +10,19 @@ jobs:
       - run:
           name: Install dependencies and build project
           command: 'echo "Installing dependencies and building project"'
+#      - run:    
+#          name: Install SUDO
+#          command: 'apt-get install -y sudo && rm -rf /var/lib/apt/lists/*'
       - run:
           name: Update APT
-          command: 'apt-get update'
-      - run:    
-          name: Install SUDO
-          command: 'apt-get install -y sudo && rm -rf /var/lib/apt/lists/*'
+          command: 'sudo apt-get update'
       - run:
           name: Install GCC
-          command: 'apt-get install -y gcc g++'
+          command: 'sudo apt-get install -y gcc g++'
       - run:
           name: Install MAKE
-          command: 'sudo apt-get install -y make'
+          command: 'sudo sudo apt-get install -y make'
       - run:
           name: Build MAKE
           command: 'make'
+      - sonarcloud/scan
